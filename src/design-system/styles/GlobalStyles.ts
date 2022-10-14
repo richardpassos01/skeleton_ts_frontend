@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import Colors from './Colors';
 
 const GlobalStyles = createGlobalStyle`
   @media only screen and (max-width: 480px) {
@@ -23,8 +22,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: ${Colors.grey};
-    background-color: ${Colors.grey};
+    color: transparent;
+    background-color: transparent;
     margin: 0;
     font-family: 'Work Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
