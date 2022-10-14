@@ -1,4 +1,3 @@
-import { Styles } from "@design-system";
 import styled from "styled-components";
 
 interface Props {
@@ -6,13 +5,13 @@ interface Props {
 }
 
 export const Button = styled.button<Props>`
-  background-color: ${Styles.Theme.primary.green};
+  background-color: ${props => props.color ?? props.theme.green};
   width: 100%;
   height: 100%;
   border-radius: 0.5em;
   align-items: center;
   justify-content: center;
-  color: ${Styles.Theme.primary.white};
+  color: ${props => props.theme.white};
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -20,11 +19,6 @@ export const Button = styled.button<Props>`
   line-height: 24px;
   cursor: pointer;
   border: none;
-
-  ${(props) => props.color &&
-    `
-      background-color: ${props.color}
-    `}
 `;
 
 export default Button;

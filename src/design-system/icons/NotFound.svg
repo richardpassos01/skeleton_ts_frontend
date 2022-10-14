@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   xml:space="preserve"
-   width="3779.5332"
-   height="2795.3999"
-   viewBox="0 0 3779.5332 2795.3999"
-   sodipodi:docname="vecteezy_404-error-concept-for-landing-page_8892188.eps"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   <defs
      id="defs6"><clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath20"><path
@@ -31,20 +17,22 @@
          id="stop22" /><stop
          style="stop-opacity:1;stop-color:#d3e5fc"
          offset="1"
-         id="stop24" /></linearGradient></defs><sodipodi:namedview
+         id="stop24" /></linearGradient></defs><sodipodiNamedview
      id="namedview4"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0" /><g
+     inkscapePageshadow="2"
+     inkscapePageopacity="0.0"
+     inkscapePagecheckerboard="0" /><g
      id="g8"
-     inkscape:groupmode="layer"
-     inkscape:label="ink_ext_XXXXXX"
+     inkscapeGroupmode="layer"
+     inkscapeLabel="ink_ext_XXXXXX"
      transform="matrix(1.3333333,0,0,-1.3333333,0,2795.4)"><g
        id="g10"
-       transform="scale(0.1)"><path
+       transform="scale(0.1)">
+       
+      <path
          d="M 0,0 H 28346.5 V 20965.5 H 0 Z"
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path12" /><g
@@ -314,4 +302,4 @@
          id="path200" /><path
          d="M 13864.1,12125.8 V 11453 c 0,-114.6 -94.6,-199.3 -199.3,-199.3 -104.7,0 -199.3,84.7 -199.3,199.3 v 672.8 h -1400.4 c -114.6,0 -214.3,89.7 -214.3,204.3 0,44.9 14.9,94.7 44.8,139.6 l 1335.6,2157.9 c 44.9,74.7 99.7,124.6 194.4,124.6 109.6,0 184.4,-84.8 184.4,-184.4 0,-34.9 -10,-79.8 -34.9,-119.6 L 12379,12524.5 h 1086.5 v 772.4 c 0,114.7 94.6,199.4 199.3,199.4 104.7,0 199.3,-84.7 199.3,-199.4 v -772.4 h 274.1 c 114.7,0 209.3,-94.7 209.3,-199.3 0,-104.7 -94.6,-199.4 -209.3,-199.4 h -274.1"
          style="fill:#ef7773;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path202" /></g></g></svg>
+         id="path202" /></g></g>

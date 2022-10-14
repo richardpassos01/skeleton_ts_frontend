@@ -1,8 +1,7 @@
-import { Styles } from "@design-system";
 import styled from "styled-components";
 
 export const HyperLink = styled.a`
-  color: ${Styles.Theme.primary.blue};
+  color: ${props => props.theme.blue};
   border: none;
   text-decoration: none;
   font-family: Poppins;

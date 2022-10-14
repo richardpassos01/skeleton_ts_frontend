@@ -1,4 +1,3 @@
-import { Styles } from '@design-system';
 import styled from 'styled-components';
 
 interface Props {
@@ -11,12 +10,7 @@ export const Span = styled.span<Props>`
   font-weight: 600;
   font-size: 1.5em;
   line-height: 32px;
-  color: ${Styles.Theme.primary.black};
+  color: ${props => props.color ?? props.theme.black};
   margin-left: .3em;
   font-size: 27px;
-
-  ${(props) => props.color &&
-    `
-      color: ${props.color}
-    `}
 `;

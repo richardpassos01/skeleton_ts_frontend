@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-import { theme } from "../../styles";
 import { Box } from "reflexbox";
 
 const Loading = styled.div`
@@ -8,7 +7,7 @@ const Loading = styled.div`
   height: 80px;
   background: transparent;
   border-radius: 50%;
-  border: 2px solid ${theme.primary.grey};
+  border: 2px solid ${props => props.theme.grey};
   border-bottom-color: transparent;
   animation: screen-loading 700ms linear infinite;
 

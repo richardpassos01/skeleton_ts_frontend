@@ -4,7 +4,7 @@ import { Icons } from "../../index";
 
 interface Props {
   backgroundColor?: boolean;
-  children: JSX.Element,
+  children?: JSX.Element,
 }
 
 const Header: React.FunctionComponent<Props> = ({ backgroundColor, children }) => {
@@ -14,7 +14,6 @@ const Header: React.FunctionComponent<Props> = ({ backgroundColor, children }) =
       <Content>
         <Flex alignItems="center" justifyContent="center">
           <Box width={50}>
-            <HeaderIcon src={Icons.Logo} />
           </Box>
         </Flex>
       </Content>

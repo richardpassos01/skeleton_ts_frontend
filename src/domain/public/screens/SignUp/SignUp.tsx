@@ -35,7 +35,7 @@ const SignUp: React.FunctionComponent = () => {
         setIsLoading(true);
         await signUp(data);
         alert("account created");
-        navigate(PublicRoutes.SIGN_IN);
+        navigate(PublicRoutes.LOGIN);
       } catch (error) {
         alert("unexpected error");
         setIsLoading(false);
@@ -88,7 +88,7 @@ const SignUp: React.FunctionComponent = () => {
                       </Button>
                     </Box>
 
-                    <HyperLink href={PublicRoutes.SIGN_IN}>
+                    <HyperLink href={PublicRoutes.LOGIN}>
                       Already have an account?
                     </HyperLink>
                   </Flex>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Flex, Box } from "reflexbox/styled-components";
-import {InputText,Header,Card,Title,Button,Line,HyperLink, Styles} from "@design-system";
+import {InputText,Header,Card,Title,Button,Line,HyperLink,Colors} from "@design-system";
 import { useFormik } from "formik";
 import { FormErrorMessages } from "@domain/shared/enums/FormErrorMessages";
 import * as yup from "yup";
@@ -75,7 +75,7 @@ const Login: React.FunctionComponent = () => {
                     <Box width={300} height={50}>
                       <Button
                         disabled={isLoading}
-                        color={Styles.Theme.primary.blue}
+                        color={Colors.blue}
                         type="submit"
                       >
                         Sign in

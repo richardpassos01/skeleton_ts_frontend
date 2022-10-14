@@ -1,4 +1,3 @@
-import { Styles } from "@design-system";
 import styled from "styled-components";
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -19,21 +18,16 @@ export const Input = styled.input<Props>`
       padding: 5px;
       width: 100%;
       height: 47px;
-      border: .1px solid ${Styles.Theme.secondary.grey};
+      border: .1px solid ${props => props.invalid ? props.theme.red : props.theme.grey};
   
     ::placeholder {
-      color: ${Styles.Theme.secondary.darkGrey};
+      color: ${props => props.theme.darkGrey};
     }
-  
-    ${(props) => props.invalid &&
-      `
-        border: 1px solid ${Styles.Theme.primary.red}
-      `}s
   `;
 
 export const SpanError = styled.span`
   font-size: 14px;
-  color: ${Styles.Theme.primary.red};
+  color: ${props => props.theme.red};
 `;
 
 export const Container = styled.div`
