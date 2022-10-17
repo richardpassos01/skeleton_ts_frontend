@@ -1,1 +1,1 @@
-export { default } from './HyperLink.styles';
+export { default as HyperLink} from './HyperLink.styles';

@@ -1,13 +1,26 @@
 import styled from "styled-components";
 
-export const HyperLink = styled.a`
-  color: ${props => props.theme.blue};
-  border: none;
+interface Props {
+  color?: string;
+  border?: boolean;
+  width?: string;
+  fontSize?: string;
+}
+
+export const HyperLink = styled.a<Props>`
+  color: ${props => props.color ?? props.theme.colors.white};
+  border: ${props => props.border ? `1px solid ${props.theme.colors.white}` : 'none'};
+  border-radius: 5px;
+  width: ${props => props.width ?? '80px'};
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   text-decoration: none;
-  font-family: Poppins;
+  font-family: system-ui;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: ${props => props.fontSize ?? '16px'};;
   cursor: pointer;
 `;
 

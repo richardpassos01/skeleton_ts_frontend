@@ -1,14 +1,14 @@
 import * as React from "react";
-import { Flex } from "reflexbox/styled-components";
-import {Button} from "@design-system";
+import {Header, HeaderItem, HyperLink} from "@design-system";
+import { PublicRoutes } from "@domain/public/routes";
 
 const PublicHeader: React.FunctionComponent = () => {
   return (
     <>
-        <Flex justifyContent="center">
-            <Button>Sign in</Button>
-            <Button>Sign up</Button>
-        </Flex>
+      <Header>
+        <HeaderItem><HyperLink href={PublicRoutes.LOGIN}>Login</HyperLink></HeaderItem>
+        <HeaderItem><HyperLink border href={PublicRoutes.SIGN_UP}>Sign up</HyperLink></HeaderItem>
+      </Header>
     </>
   );
 };

@@ -1,18 +1,22 @@
 import NotFound from "./icons/NotFound.svg";
+import Icon from "./icons/icon.png";
 
-export {default as GlobalStyles} from './styles/GlobalStyles';
-export {default as Colors} from './styles/Colors';
+export {GlobalStyles} from './styles/GlobalStyles';
+export {Colors} from './styles/Colors';
+export {Theme} from './styles/Theme';
 
-export {default as Button} from './components/Button';
-export {default as Card} from './components/Card';
-export {default as Header} from './components/Header';
-export {default as HyperLink} from './components/HyperLink';
-export {default as InputText} from './components/InputText';
-export {default as Line} from './components/Line';
-export {default as Loader} from './components/Loader';
-export {default as Title} from './components/Title';
+export {Button} from './components/Button';
+export {Card} from './components/Card';
+export {Header, HeaderItem} from './components/Header';
+export {HyperLink} from './components/HyperLink';
+export {InputText} from './components/InputText';
+export {InputLabel} from './components/InputLabel';
+export {Line} from './components/Line';
+export {Loader} from './components/Loader';
+export {Title} from './components/Title';
 
 
 export const Icons =  {
   NotFound,
+  Icon
 };

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Flex, Box } from "reflexbox/styled-components";
-import {InputText,Header,Card,Title,Button,HyperLink} from "@design-system";
+import {InputText,Card,Title,Button,HyperLink} from "@design-system";
 import { PublicRoutes } from "@domain/public/routes";
 import { useFormik } from "formik";
 import { FormErrorMessages } from "@domain/shared/enums/FormErrorMessages";
@@ -8,6 +8,7 @@ import * as yup from "yup";
 import useAuthentication from "@domain/public/hooks/useAuthentication";
 import { User } from "@domain/public/interfaces/User";
 import { useNavigate } from "react-router-dom";
+import PublicHeader from '@components/PublicHeader/PublicHeader';
 
 const validationSchema = yup.object().shape({
   name: yup.string().required(FormErrorMessages.REQUIRED_FIELD),
@@ -45,11 +46,11 @@ const SignUp: React.FunctionComponent = () => {
 
   return (
     <>
-        <Header />
+        <PublicHeader />
         <Flex justifyContent="center">
           <Card width={450}>
             <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
-              <Title title="Create a new account" />
+              <Title>Create a new account</Title>
             </Flex>
             <Flex alignItems="center" justifyContent="center" mb={20} mt={30}>
               <Box width={[320, 400]}>
@@ -59,21 +60,18 @@ const SignUp: React.FunctionComponent = () => {
                     onChange={formik.handleChange}
                     value={formik.values.name}
                     invalid={formik.touched.name && formik.errors.name}
-                    placeholder="Name"
                   />
                   <InputText
                     name="email"
                     onChange={formik.handleChange}
                     value={formik.values.email}
                     invalid={formik.touched.email && formik.errors.email}
-                    placeholder="Email"
                   />
                   <InputText
                     name="password"
                     onChange={formik.handleChange}
                     value={formik.values.password}
                     invalid={formik.touched.password && formik.errors.password}
-                    placeholder="Password"
                   />
 
                   <Flex

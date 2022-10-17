@@ -9,7 +9,7 @@ const Dashboard: React.FunctionComponent = () => {
         <Flex justifyContent="center">
           <Card width={450}>
             <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
-              <Title title="Dashboard" />
+              <Title>Dashboard</Title>
             </Flex>
             <Flex alignItems="center" justifyContent="center" mb={20} mt={30}>
               <div>Authenticated</div>

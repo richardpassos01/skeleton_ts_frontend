@@ -1,21 +1,20 @@
-import { Box, Flex } from "reflexbox";
-import { Content, HeaderIcon } from "./Header.styles";
-import { Icons } from "../../index";
+import { Content, HeaderContainer, HeaderIcon, HeaderItem } from "./Header.styles";
+import { HyperLink, Icons} from "@design-system";
 
 interface Props {
-  backgroundColor?: boolean;
-  children?: JSX.Element,
+  backgroundColor?: string;
+  children?: JSX.Element[],
 }
 
 const Header: React.FunctionComponent<Props> = ({ backgroundColor, children }) => {
 
   return (
     <>
-      <Content>
-        <Flex alignItems="center" justifyContent="center">
-          <Box width={50}>
-          </Box>
-        </Flex>
+      <Content backgroundColor={backgroundColor}>
+        <HeaderContainer>
+          <HeaderItem><HyperLink href="/"><HeaderIcon src={Icons.Icon} /></HyperLink></HeaderItem>
+          {children}
+        </HeaderContainer>
       </Content>
     </>
   );

@@ -1,14 +1,13 @@
-const Colors = {
+export const Colors = {
   grey: '#161b22',
   black: '#010409',
-  green: '#39B100', 
+  green: '#2da44e', 
   blue: '#0e56da',
   white: '#ffffff',
   red: '#ff0000',
   darkGrey: '#888888',
+  lightGrey: '#f6f8fa',
   secondary: {
-    grey: 'grey',
+    grey: '#d0d7de',
   }
 }
-
-export default Colors;

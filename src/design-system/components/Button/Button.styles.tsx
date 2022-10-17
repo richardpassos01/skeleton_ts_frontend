@@ -1,24 +1,27 @@
 import styled from "styled-components";
 
 interface Props {
-  color?: string;
+  backgroundColor?: string;
+  border?: boolean;
+  width?: string;
+  height?: string;
 }
 
 export const Button = styled.button<Props>`
-  background-color: ${props => props.color ?? props.theme.green};
-  width: 100%;
-  height: 100%;
+  background-color: ${props => props.backgroundColor ?? props.theme.colors.green};
+  width: ${props => props.width ?? '100%'};
+  height: ${props => props.height ?? '100%'};
   border-radius: 0.5em;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.white};
-  font-family: Poppins;
+  color: ${props => props.theme.colors.white};
+  font-family: system-ui;
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 15px;
   line-height: 24px;
   cursor: pointer;
-  border: none;
+  border: ${props => props.border ? `1px solid ${props.theme.colors.white}` : 'none'};
 `;
 
 export default Button;

@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import Tokens from './Tokens';
 
-const GlobalStyles = createGlobalStyle`
-  @media only screen and (max-width: 480px) {
+export const GlobalStyles = createGlobalStyle`
+  @media ${Tokens.mobile} {
     html {
       font-size: 100%;
     }
@@ -50,5 +51,3 @@ const GlobalStyles = createGlobalStyle`
     appearance: none;
   }
 `;
-
-export default GlobalStyles;

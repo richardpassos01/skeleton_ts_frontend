@@ -1,7 +1,7 @@
 import * as React from "react";
 import { RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles, Colors, Loader } from "@design-system";
+import { GlobalStyles, Theme, Loader } from "@design-system";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { router } from "./routes";
 
@@ -13,7 +13,7 @@ const App: React.FunctionComponent = () => {
         <GlobalStyles />
         <QueryClientProvider client={queryClient}>
           <React.Suspense fallback={<Loader />}>
-              <ThemeProvider theme={Colors}>
+              <ThemeProvider theme={Theme}>
                 <RouterProvider router={router} />
               </ThemeProvider>
           </React.Suspense>

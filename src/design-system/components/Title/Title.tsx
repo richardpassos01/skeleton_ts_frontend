@@ -1,14 +1,14 @@
 import { Span } from "./Title.styles";
 
 interface Props {
-  title: string;
+  children: string;
   color?: string;
 }
 
-const Title: React.FunctionComponent<Props> = ({ title, color }) => {
+const Title: React.FunctionComponent<Props> = ({ children, color }) => {
   return (
     <>
-      <Span color={color}>{title}</Span>
+      <Span color={color}>{children}</Span>
     </>
   );
 };

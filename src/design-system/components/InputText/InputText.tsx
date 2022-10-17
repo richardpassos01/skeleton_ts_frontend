@@ -2,14 +2,16 @@ import * as React from "react";
 import { Box } from "reflexbox";
 import { Container, SpanError, Input } from "./InputText.styles";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  invalid?: any;
-  value?: any;
+interface Props {
+  name?: string;
+  onChange: any;
+  value: string;
+  invalid: any;
 }
 
-const InputText = React.forwardRef<any, Props>(({ invalid, ...props }) => (
+const InputText: React.FunctionComponent<Props> = (({ name, onChange, value, invalid }) => (
   <Container>
-    <Input {...props} invalid={invalid} />
+    <Input name={name} onChange={onChange} value={value} invalid={invalid} />
     {invalid && (
       <Box mt={1}>
         <SpanError>{invalid}</SpanError>

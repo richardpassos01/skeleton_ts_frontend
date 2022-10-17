@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Flex, Box } from "reflexbox/styled-components";
-import {InputText,Header,Card,Title,Button,Line,HyperLink,Colors} from "@design-system";
+import {InputText,Card,Title,Button,InputLabel,HyperLink,Colors} from "@design-system";
 import { useFormik } from "formik";
 import { FormErrorMessages } from "@domain/shared/enums/FormErrorMessages";
 import * as yup from "yup";
@@ -8,6 +8,7 @@ import useAuthentication from "@domain/public/hooks/useAuthentication";
 import { DashboardRoutes } from "@domain/dashboard/routes";
 import { PublicRoutes } from "@domain/public/routes";
 import { useNavigate } from "react-router-dom";
+import PublicHeader from '@components/PublicHeader/PublicHeader';
 
 const validationSchema = yup.object().shape({
   email: yup
@@ -43,62 +44,59 @@ const Login: React.FunctionComponent = () => {
 
   return (
     <>
-        <Header />
-        <Flex justifyContent="center">
-          <Card width={450}>
+        <PublicHeader />
+        <Flex alignItems="center" flexDirection="column">
+          <Card width={345} mt={35}>
             <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
-              <Title title="Sign in" />
+              <Title>Sign in</Title>
             </Flex>
             <Flex alignItems="center" justifyContent="center" mb={20} mt={30}>
-              <Box width={[320, 400]}>
                 <form onSubmit={formik.handleSubmit}>
-                  <InputText
-                    name="email"
-                    onChange={formik.handleChange}
-                    value={formik.values.email}
-                    invalid={formik.touched.email && formik.errors.email}
-                    placeholder="Email"
-                  />
-                  <InputText
-                    name="password"
-                    onChange={formik.handleChange}
-                    value={formik.values.password}
-                    invalid={formik.touched.password && formik.errors.password}
-                    placeholder="Password"
-                  />
-                  <Flex
-                    alignItems="center"
-                    justifyContent="space-between"
-                    mt={20}
-                    flexDirection="column"
-                  >
-                    <Box width={300} height={50}>
-                      <Button
-                        disabled={isLoading}
-                        color={Colors.blue}
-                        type="submit"
-                      >
-                        Sign in
+                  <Box>
+                    <InputLabel>Email</InputLabel>
+                    <InputText
+                      name="email"
+                      onChange={formik.handleChange}
+                      value={formik.values.email}
+                      invalid={formik.touched.email && formik.errors.email}
+                    />
+                  </Box>
+                  <Box mt={20}>
+                    <InputLabel>Password</InputLabel>
+                    <InputText
+                        name="password"
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                        invalid={formik.touched.password && formik.errors.password}
+                      />
+                  </Box>
+                    <Box mt={20} width={300} height={35}>
+                     <Button
+                       disabled={isLoading}
+                       type="submit"
+                     >
+                       Sign in
                       </Button>
                     </Box>
-                  </Flex>
                 </form>
-                <Box mt={20}>
-                  <Line />
-                </Box>
+          
                 <Flex
                   alignItems="center"
                   justifyContent="space-between"
                   mt={20}
                   flexDirection="column"
                 >
-                  <Box width={200} height={40} mb={10}>
-                  <HyperLink href={PublicRoutes.SIGN_UP}>
-                      Create new Account
-                  </HyperLink>
-                  </Box>
-                </Flex>
-              </Box>
+              </Flex>
+            </Flex>
+          </Card>
+
+          <Card width={345} mt={20}>
+            <Flex alignItems="center" justifyContent="center">
+              <InputLabel>New user?</InputLabel>
+              <Box width={10}/>
+              <HyperLink href={PublicRoutes.SIGN_UP} color={Colors.blue} width="1" fontSize="14px">
+                  Create an account
+              </HyperLink>
             </Flex>
           </Card>
         </Flex>

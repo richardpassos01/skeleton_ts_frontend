@@ -1,1 +1,1 @@
-export { default } from './Card.styles';
+export { default as Card } from './Card.styles';

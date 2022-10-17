@@ -7,7 +7,7 @@ const Loading = styled.div`
   height: 80px;
   background: transparent;
   border-radius: 50%;
-  border: 2px solid ${props => props.theme.grey};
+  border: 2px solid ${props => props.theme.colors.grey};
   border-bottom-color: transparent;
   animation: screen-loading 700ms linear infinite;
 

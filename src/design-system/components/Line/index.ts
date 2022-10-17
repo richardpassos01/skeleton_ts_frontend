@@ -1,1 +1,1 @@
-export { default } from './Line.styles';
+export { default as Line} from './Line.styles';
