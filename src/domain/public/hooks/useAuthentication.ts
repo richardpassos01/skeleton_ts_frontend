@@ -1,12 +1,12 @@
 import { QueryCache } from "react-query";
 import { Authentication } from "@domain/public/interfaces/Authentication";
-import publicRoutesApi from "../api/publicRoutesApi";
+import {createUser, updateUserPassword, authenticateUser} from "../api/publicRoutesApi";
 import { User } from "../interfaces/User";
 
 const useAuthentication = () => {
   const login = async ({ email, password }: User): Promise<Authentication | void> => {
     try {
-      const authentication = await publicRoutesApi.authenticateUser(email, password);
+      const authentication = await authenticateUser(email, password);
 
       if (authentication) {
         localStorage.setItem("authentication", JSON.stringify(authentication));
@@ -19,11 +19,11 @@ const useAuthentication = () => {
   };
 
   const signUp = async ({ name, email, password }: User): Promise<void> => {
-    if (!name) {
-      return;
-    }
-    
-    return publicRoutesApi.createUser(name, email, password);
+    return createUser(name, email, password);
+  };
+
+  const updatePassword = async ({ email, password }: User): Promise<void> => {
+    return updateUserPassword(email, password);
   };
 
   const logout = () => {
@@ -48,6 +48,7 @@ const useAuthentication = () => {
     login,
     logout,
     signUp,
+    updatePassword,
     getAccessToken,
   };
 };

@@ -1,10 +1,11 @@
 import SignUp from './screens/SignUp';
 import Login from './screens/Login';
+import UpdatePassword from './screens/UpdatePassword';
 
 export enum PublicRoutes {
   SIGN_UP = '/signup',
   LOGIN = '/login',
-  RESET_PASSWORD = 'reset_password',
+  UPDATE_PASSWORD = '/reset_password',
 }
 
 const publicRoutes: {
@@ -18,6 +19,10 @@ const publicRoutes: {
   {
     path: PublicRoutes.LOGIN,
     Component: Login,
+  },
+  {
+    path: PublicRoutes.UPDATE_PASSWORD,
+    Component: UpdatePassword,
   }
 ];
 

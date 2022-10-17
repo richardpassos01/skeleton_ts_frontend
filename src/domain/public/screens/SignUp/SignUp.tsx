@@ -36,7 +36,7 @@ const SignUp: React.FunctionComponent = () => {
         setIsLoading(true);
         await signUp(data);
         alert("account created");
-        navigate(PublicRoutes.LOGIN);
+        return navigate(PublicRoutes.LOGIN);
       } catch (error) {
         alert("unexpected error");
         setIsLoading(false);
