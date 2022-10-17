@@ -4,6 +4,7 @@ import Login from './screens/Login';
 export enum PublicRoutes {
   SIGN_UP = '/signup',
   LOGIN = '/login',
+  RESET_PASSWORD = 'reset_password',
 }
 
 const publicRoutes: {

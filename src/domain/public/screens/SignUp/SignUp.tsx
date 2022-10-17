@@ -48,10 +48,10 @@ const SignUp: React.FunctionComponent = () => {
     <>
       <PublicHeader />
       <Flex alignItems="center" flexDirection="column">
-        <Card width={345} mt={35}>
-          <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
+        <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
             <Title>Create account</Title>
-          </Flex>
+        </Flex>
+        <Card width={345}>
           <Flex alignItems="center" justifyContent="center" mb={20} mt={30}>
             <form onSubmit={formik.handleSubmit}>
               <Box>

@@ -1,21 +1,16 @@
 import * as React from "react";
 import { Flex } from "reflexbox/styled-components";
-import {Header,Card,Title} from "@design-system";
+import { Header, Title } from "@design-system";
 
 const Dashboard: React.FunctionComponent = () => {
   return (
     <>
-        <Header />
-        <Flex justifyContent="center">
-          <Card width={450}>
-            <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
-              <Title>Dashboard</Title>
-            </Flex>
-            <Flex alignItems="center" justifyContent="center" mb={20} mt={30}>
-              <div>Authenticated</div>
-            </Flex>
-          </Card>
+      <Header />
+      <Flex justifyContent="center">
+        <Flex mt={20} alignItems="center" justifyContent="center">
+          <Title>Dashboard</Title>
         </Flex>
+      </Flex>
     </>
   );
 };

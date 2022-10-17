@@ -25,7 +25,6 @@ const Login: React.FunctionComponent = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: "",
       email: "",
       password: "",
     },
@@ -46,10 +45,11 @@ const Login: React.FunctionComponent = () => {
     <>
       <PublicHeader />
       <Flex alignItems="center" flexDirection="column">
-        <Card width={345} mt={35}>
-          <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
-            <Title>Sign in</Title>
-          </Flex>
+        <Flex mt={20} mb={20} alignItems="center" justifyContent="center">
+          <Title>Sign in</Title>
+        </Flex>
+
+        <Card width={345}>
           <Flex alignItems="center" justifyContent="center" mb={20} mt={30}>
             <form onSubmit={formik.handleSubmit}>
               <Box>
@@ -62,7 +62,12 @@ const Login: React.FunctionComponent = () => {
                 />
               </Box>
               <Box mt={20}>
-                <InputLabel>Password</InputLabel>
+                <Flex justifyContent="space-between" alignItems="center">
+                  <InputLabel>Password</InputLabel>
+                  <HyperLink href={PublicRoutes.RESET_PASSWORD} color={Colors.blue} width="1" fontSize="12px">
+                    Forgot password?
+                  </HyperLink>
+                </Flex>
                 <InputText
                   name="password"
                   onChange={formik.handleChange}
